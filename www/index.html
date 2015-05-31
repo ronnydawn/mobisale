@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <!-- <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet"> -->
+    <!-- <link href="css/scrolling-nav.css" rel="stylesheet"> -->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/build/react.js"></script>
+    <script src="js/lib/require.js"></script>
+
+  </head>
+  <body>
+    <div id="example"></div>
+      <script src="js/build/appw.js"></script>
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script src="js/lib/jquery.navgoco.js"></script>
+    <script src="js/lib/main.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/owl.carousele.min.js"></script>
+    <!-- <script src="js/lib/pageslider-react.js"></script> -->
+    <script src="js/lib/router.js"></script>
+    
+    <script type="text/javascript">
+
+        $('#nav-expander').on('click',function(e){
+          e.preventDefault();
+          $('body').toggleClass('nav-expanded');
+        });
+        $('#nav-close').on('click',function(e){
+          e.preventDefault();
+          $('body').removeClass('nav-expanded');
+        });
+        
+        
+        // Initialize navgoco with default options
+        $(".main-menu").navgoco({
+            caret: '<span class="caret"></span>',
+            accordion: false,
+            openClass: 'open',
+            save: true,
+            cookie: {
+                name: 'navgoco',
+                expires: false,
+                path: '/'
+            },
+            slide: {
+                duration: 300,
+                easing: 'swing'
+            }
+        });
+
+        $("#owl-demo").owlCarousel({
+            navigation : true, // Show next and prev buttons
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true
+        });
+
+  </script>
+  </body>
+</html>
