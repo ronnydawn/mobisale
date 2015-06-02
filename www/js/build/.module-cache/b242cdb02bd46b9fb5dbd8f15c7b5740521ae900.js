@@ -37,8 +37,8 @@ var HomePage = React.createClass({displayName: "HomePage",
             React.createElement(Banner, null), 
 
             React.createElement("div", {className: "panel panel-default category-header"}, 
-                React.createElement("div", {className: "panel-body"}, 
-                  "Latest Product ", React.createElement("a", {className: "pull-right", href: "#"}, "More >")
+                React.createElement("div", {className: "panel-body col-md-4"}, 
+                  "Basic panel example"
                 )
               ), 
             React.createElement("div", {className: "container"}, 

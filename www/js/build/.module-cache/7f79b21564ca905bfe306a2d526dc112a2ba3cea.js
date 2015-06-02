@@ -35,14 +35,16 @@ var HomePage = React.createClass({displayName: "HomePage",
                 React.createElement(SideTriggerMenu, null)
             ), 
             React.createElement(Banner, null), 
+            React.createElement("div", {className: "jumbotron"}, 
 
-            React.createElement("div", {className: "panel panel-default category-header"}, 
-                React.createElement("div", {className: "panel-body"}, 
-                  "Latest Product ", React.createElement("a", {className: "pull-right", href: "#"}, "More >")
-                )
-              ), 
+              React.createElement("div", {className: "container"}, 
+
+                React.createElement("p", null, "It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique."), 
+                React.createElement("p", null, React.createElement("a", {className: "btn btn-primary btn-lg"}, "Learn more »"))
+              )
+            ), 
+
             React.createElement("div", {className: "container"}, 
-              
             React.createElement(ProductBanner, null)
             ), 
             React.createElement("div", {className: "container"}, 

@@ -59,12 +59,18 @@
             }
         });
 
-        $("#owl-demo").owlCarousel({
+        $("#owl-banner").owlCarousel({
             navigation : true, // Show next and prev buttons
             slideSpeed : 300,
             paginationSpeed : 400,
             singleItem:true
         });
+
+        $("#owl-product-banner").owlCarousel({
+            items : 4,
+            lazyLoad : true,
+            navigation : true
+          }); 
 
   </script>
   </body>

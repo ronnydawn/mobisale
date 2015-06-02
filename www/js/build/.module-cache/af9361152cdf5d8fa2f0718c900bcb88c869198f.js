@@ -35,14 +35,16 @@ var HomePage = React.createClass({displayName: "HomePage",
                 React.createElement(SideTriggerMenu, null)
             ), 
             React.createElement(Banner, null), 
+            React.createElement("div", {className: "jumbotron"}, 
 
-            React.createElement("div", {className: "panel panel-default category-header"}, 
-                React.createElement("div", {className: "panel-body"}, 
-                  "Latest Product ", React.createElement("a", {className: "pull-right", href: "#"}, "More >")
-                )
-              ), 
+              React.createElement("div", {className: "container"}, 
+
+                React.createElement("p", null, "It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique."), 
+                React.createElement("p", null, React.createElement("a", {className: "btn btn-primary btn-lg"}, "Learn more »"))
+              )
+            ), 
+
             React.createElement("div", {className: "container"}, 
-              
             React.createElement(ProductBanner, null)
             ), 
             React.createElement("div", {className: "container"}, 
@@ -164,23 +166,18 @@ var FooterMenu = React.createClass({displayName: "FooterMenu",
   render: function() {
     return (
           React.createElement("footer", null, 
-        React.createElement("div", {className: "navbar-fixed-bottom"}, 
+        React.createElement("div", {className: "navbar navbar-inverse navbar-fixed-bottom"}, 
+            React.createElement("div", {className: "container"}, 
 
-        React.createElement("div", {className: "btn-group btn-group-justified", role: "group", "aria-label": "..."}, 
-          React.createElement("div", {className: "btn-group", role: "group"}, 
-            React.createElement("button", {type: "button", className: "btn btn-default"}, "Home")
-          ), 
-          React.createElement("div", {className: "btn-group", role: "group"}, 
-            React.createElement("button", {type: "button", className: "btn btn-default"}, "Account")
-          ), 
-          React.createElement("div", {className: "btn-group", role: "group"}, 
-            React.createElement("button", {type: "button", className: "btn btn-default"}, "Chart")
-          ), 
-          React.createElement("div", {className: "btn-group", role: "group"}, 
-            React.createElement("button", {type: "button", className: "btn btn-default"}, "News")
-          )
-        )
+                    React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "col-md-1"}, ".col-md-1"), 
+                    React.createElement("div", {className: "col-md-1"}, ".col-md-1"), 
+                    React.createElement("div", {className: "col-md-1"}, ".col-md-1"), 
+                    React.createElement("div", {className: "col-md-1"}, ".col-md-1")
+                    )
 
+
+            )
         )
     )
     );

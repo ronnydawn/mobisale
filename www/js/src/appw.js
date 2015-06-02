@@ -34,17 +34,17 @@ var HomePage = React.createClass({
                 <ButtonShopCart />
                 <SideTriggerMenu />
             </div>
+            <Banner />
 
-            <div className="jumbotron">
-              <div className="container">
-
-                <Banner />
-
-                <p>It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a className="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+            <div className="panel panel-default category-header">
+                <div className="panel-body">
+                  Latest Product <a className="pull-right" href="#">More &gt;</a>
+                </div>
               </div>
+            <div className="container">
+              
+            <ProductBanner />
             </div>
-
             <div className="container">
 
               <div className="row">
@@ -67,9 +67,8 @@ var HomePage = React.createClass({
 
               <hr/>
 
-              <footer>
-                <p>&copy; Company 2013</p>
-              </footer>
+              <FooterMenu />
+               
             </div>
             
         </div>
@@ -138,13 +137,54 @@ var ButtonShopCart = React.createClass({
 var Banner = React.createClass({
     render: function() {
         return (
-            <div id="owl-demo" className="owl-carousel owl-theme">
+            <div id="owl-banner" className="owl-carousel owl-theme">
               <div className="item"><img src="assets/cow.jpg" alt="The Last of us" /></div>
               <div className="item"><img src="assets/cow.jpg" alt="GTA V" /></div>
               <div className="item"><img src="assets/cow.jpg" alt="Mirror Edge" /></div>
             </div>
         );
     }
+});
+
+var ProductBanner = React.createClass({
+  render: function() {
+    return (
+      <div id="owl-product-banner" className="owl-carousel">
+        <div className="item"><img className="lazyOwl" data-src="assets/square-cow.jpg" alt="Lazy Owl Image" /></div>
+        <div className="item"><img className="lazyOwl" data-src="assets/square-cow.jpg" alt="Lazy Owl Image" /></div>
+        <div className="item"><img className="lazyOwl" data-src="assets/square-cow.jpg" alt="Lazy Owl Image" /></div>
+        <div className="item"><img className="lazyOwl" data-src="assets/square-cow.jpg" alt="Lazy Owl Image" /></div>
+        <div className="item"><img className="lazyOwl" data-src="assets/square-cow.jpg" alt="Lazy Owl Image" /></div>
+      </div>
+    );
+  }
+});
+
+var FooterMenu = React.createClass({
+  render: function() {
+    return (
+          <footer>
+        <div className="navbar-fixed-bottom">
+
+        <div className="btn-group btn-group-justified" role="group" aria-label="...">
+          <div className="btn-group" role="group">
+            <button type="button" className="btn btn-default">Home</button>
+          </div>
+          <div className="btn-group" role="group">
+            <button type="button" className="btn btn-default">Account</button>
+          </div>
+          <div className="btn-group" role="group">
+            <button type="button" className="btn btn-default">Chart</button>
+          </div>
+          <div className="btn-group" role="group">
+            <button type="button" className="btn btn-default">News</button>
+          </div>
+        </div>
+
+        </div>
+    </footer>
+    );
+  }
 });
 
 React.render(
